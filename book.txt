@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Python Basics",
+    "language": "English",
+    "price": 499
+  },
+  {
+    "id": 2,
+    "title": "FastAPI Fundamentals",
+    "language": "English",
+    "price": 599
+  },
+  {
+    "id": 3,
+    "title": "Learning Java",
+    "language": "English",
+    "price": 699
+  },
+  {
+    "id": 4,
+    "title": "Python Programming",
+    "language": "Tamil",
+    "price": 399
+  },
+  {
+    "id": 5,
+    "title": "Advanced Python",
+    "language": "French",
+    "price": 1499
+  }
+]
