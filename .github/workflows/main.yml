@@ -5,6 +5,11 @@ on:
 jobs:
   deploy_fastapi:
     runs-on: ubuntu-latest
+    
+    defaults:
+      run:
+        working-directory: ./PersonalAI-FastAPI
+        
     steps:
       - name: First time
         run: echo "Job Started"
@@ -20,25 +25,7 @@ jobs:
         run: sudo apt install python3-pip -y
       - name: Python, Pip Status
         run: echo "Python,Pip Installed"
-      - name: Change Directory
-        run: cd PersonalAI-FastAPI
-      - name: list files
-        run: ls -lrt
-      - name: Change Directory
-        run: cd PersonalAI-FastAPI
-      - name: list files
-        run: ls -lrt
-      - name: Change Directory
-        run: cd PersonalAI-FastAPI
-      - name: list files
-        run: ls -lrt
-      - name: Change Directory
-        run: cd PersonalAI-FastAPI
-      - name: list files
-        run: ls -lrt
-      - name: present directory
-        run: pwd
-      #- name: Install Dependency
-        #run: pip3 install -r requirement.txt
+      - name: Install Dependency
+        run: pip3 install -r requirement.txt
       - name: Dependency Status
         run: echo "Dependency Installed"
