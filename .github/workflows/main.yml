@@ -6,24 +6,18 @@ jobs:
   deploy_fastapi:
     runs-on: ubuntu-latest
     steps:
-      - name: First time
-        run: echo "Job Started"
       - name: Git Checkout
         run: git clone https://github.com/vinodraajalingam/PersonalAI-FastAPI.git
-      - name: Clone Status
-        run: echo "Git Clone Completed"
       - name: Update Apt
         run: sudo apt update
       - name: Install Python
         run: sudo apt install python3 -y
       - name: Install Pip
         run: sudo apt install python3-pip -y
-      - name: Python, Pip Status
-        run: echo "Python,Pip Installed"
       - name: Install Dependency
         run: |
               cd PersonalAI-FastAPI
               pip3 install -r requirement.txt
               hostname -I
               uvicorn main:app --reload --host 127.0.0.1 --port 5641 &
-              sleep 5
+              sleep 50
