@@ -17,6 +17,10 @@ jobs:
       - name: Install Dependency
         run: |
               cd PersonalAI-FastAPI
+              sudo apt install python3-venv python3-full -y
+              python3 -m venv venv
+              source venv/bin/activate
+              echo "req install begin"
               pip3 install -r requirement.txt
               hostname -I
               uvicorn main:app --reload --port 9000 &
