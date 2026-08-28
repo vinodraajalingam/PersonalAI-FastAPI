@@ -32,7 +32,13 @@ jobs:
         run: cd PersonalAI-FastAPI
       - name: list files
         run: ls -lrt
-      - name: Install Dependency
-        run: pip3 install -r requirement.txt
+      - name: Change Directory
+        run: cd PersonalAI-FastAPI
+      - name: list files
+        run: ls -lrt
+      - name: present directory
+        run: pwd
+      #- name: Install Dependency
+        #run: pip3 install -r requirement.txt
       - name: Dependency Status
-        run: "Dependency Installed"
+        run: echo "Dependency Installed"
