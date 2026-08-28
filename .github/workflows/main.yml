@@ -4,7 +4,7 @@ on:
       - main
 jobs:
   deploy_fastapi:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Git Checkout
         run: git clone https://github.com/vinodraajalingam/PersonalAI-FastAPI.git
