@@ -20,5 +20,9 @@ jobs:
         run: sudo apt install python3-pip -y
       - name: Python, Pip Status
         run: echo "Python,Pip Installed"
-      - name: List files
-        run: ls -lrt
+      - name: Change Directory
+        run: cd PersonalAI-FastAPI
+      - name: Install Dependency
+        run: pip3 install -r requirements.txt
+      - name: Dependency Status
+        run: "Dependency Installed"
