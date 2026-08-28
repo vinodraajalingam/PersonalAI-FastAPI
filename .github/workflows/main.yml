@@ -28,6 +28,10 @@ jobs:
         run: cd PersonalAI-FastAPI
       - name: list files
         run: ls -lrt
+      - name: Change Directory
+        run: cd PersonalAI-FastAPI
+      - name: list files
+        run: ls -lrt
       - name: Install Dependency
         run: pip3 install -r requirement.txt
       - name: Dependency Status
