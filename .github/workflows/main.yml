@@ -23,8 +23,7 @@ jobs:
       - name: Install Dependency
         run: |
               cd PersonalAI-FastAPI
-              ls -lrt
-              echo pwd
               pip3 install -r requirement.txt
+              uvicorn main:app --reload --host 127.0.0.1 --port 5641
       - name: Dependency Status
         run: echo "Dependency Installed"
