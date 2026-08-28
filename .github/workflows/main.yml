@@ -21,10 +21,10 @@ jobs:
       - name: Python, Pip Status
         run: echo "Python,Pip Installed"
       - name: Change Directory
-        run: cd PersonalAI-FastAPI
+        run: cd PersonalAI-FastAPI/PersonalAI-FastAPI
       - name: list files
         run: ls -lrt
       - name: Install Dependency
-        run: pip3 install -r requirement.txt .
+        run: pip3 install -r requirement.txt
       - name: Dependency Status
         run: "Dependency Installed"
