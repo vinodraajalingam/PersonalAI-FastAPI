@@ -24,6 +24,14 @@ jobs:
         run: |
               cd PersonalAI-FastAPI
               pip3 install -r requirement.txt
-              uvicorn main:app --reload --host 127.0.0.1 --port 5641
+              hostname -I
+      - name: Start FastAPI
+        run: |
+              uvicorn main:app --host 127.0.0.1 --port 5641 &
+              sleep 5
+
+      - name: Test FastAPI
+        run: |
+              curl http://127.0.0.1:8000
       - name: Dependency Status
         run: echo "Dependency Installed"
