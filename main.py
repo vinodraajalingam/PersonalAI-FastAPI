@@ -4,7 +4,7 @@ from fastapi.responses import FileResponse
 from pydantic import BaseModel
 import json
 
-# Creating FastAPI App
+# Creating FastAPI Apps
 app = FastAPI()
 
 class Book(BaseModel):
