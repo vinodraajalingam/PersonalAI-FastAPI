@@ -3,7 +3,7 @@ on:
     branches:
       - main
 jobs:
-  test_schedule:
+  deploy_fastapi:
     runs-on: ubuntu-latest
     steps:
       - name: First time
@@ -12,10 +12,12 @@ jobs:
         run: git clone https://github.com/vinodraajalingam/PersonalAI-FastAPI.git
       - name: Clone Status
         run: echo "Git Clone Completed"
+      - name: Update Apt
+        run: sudo apt update
       - name: Install Python
-        run: sudo install python -y
+        run: sudo apt install python3 -y
       - name: Install Pip
-        run: sudo install pip -y
+        run: sudo apt install python3-pip -y
       - name: Python, Pip Status
         run: echo "Python,Pip Installed"
       - name: List files
