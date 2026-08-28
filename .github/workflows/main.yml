@@ -24,5 +24,5 @@ jobs:
               pip3 install -r requirement.txt
               hostname -I
               echo "req install end.."
-              uvicorn main:app --reload --host localhost --port 9000 &
-              sleep 200
+              uvicorn main:app --host 0.0.0.0 --port 9000 &
+              sleep 250
